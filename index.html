@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./dist/css/final.css" rel="stylesheet">
+    <link href="./src/input.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <title>Bagas|Portfolio</title>
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+</head>
+<body class=" dark:bg-slate-800 dark:text-slate-100">
+    <header class="top-0 left-0 w-full flex absolute z-10 items-center bg-transparent py-2 lg:pt-0">
+        <div class="container">
+            <div class="flex items-center justify-between py-2 relative">
+                <div class="px-2">
+                    <h2 class="font-extrabold text-sky-500 lg:text-2xl ">Portfolio</h2>
+                </div>
+                <div class="flex ml-auto mr-5 lg:right-0 lg:absolute">
+                    <label for="checkbox" class="toggler block w-16 h-7 border-2 dark:border-sky-500 rounded-full relative cursor-pointer ">
+                        <input type="checkbox" id="checkbox" class="hidden">
+                        <span class="ball inline-block w-5 h-5 bg-sky-500 rounded-full z-10 "></span>
+                        <?xml version="1.0" ?><svg class="feather feather-sun sunn left-1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="5"/><line x1="12" x2="12" y1="1" y2="3"/><line x1="12" x2="12" y1="21" y2="23"/><line x1="4.22" x2="5.64" y1="4.22" y2="5.64"/><line x1="18.36" x2="19.78" y1="18.36" y2="19.78"/><line x1="1" x2="3" y1="12" y2="12"/><line x1="21" x2="23" y1="12" y2="12"/><line x1="4.22" x2="5.64" y1="19.78" y2="18.36"/><line x1="18.36" x2="19.78" y1="5.64" y2="4.22"/></svg>
+                        <?xml version="1.0" ?><svg fill="none"  stroke-width="1.5" class="moon right-1" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M3 11.5066C3 16.7497 7.25034 21 12.4934 21C16.2209 21 19.4466 18.8518 21 15.7259C12.4934 15.7259 8.27411 11.5066 8.27411 3C5.14821 4.55344 3 7.77915 3 11.5066Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </label>
+                </div>
+                <div class="flex items-center px-4 ">
+                    <button id="humberger" name="humberger" type="button" class="block absolute right-2 lg:hidden ">
+                        <span class="w-[30px] h-[3px] my-2 block bg-black transition duration-300 ease-in-out origin-top-left dark:bg-white"></span>
+                        <span class="w-[30px] h-[3px] my-2 block bg-black transition duration-300 ease-in-out dark:bg-white"></span>
+                        <span class="w-[30px] h-[3px] my-2 block bg-black transition duration-300 ease-in-out origin-bottom-left dark:bg-white"></span>
+                    </button>
+                    <nav id="nav-menu" class="hidden absolute py-2 px-2 lg:px-0 bg-white shadow-lg rounded-xl max-w-[250px] w-full right-2 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-slate-600 dark:bg-opacity-80 lg:dark:bg-transparent">
+                        <ul class="block lg:flex lg:mx-auto lg:mr-14">
+                            <li class="group ">
+                                <a href="#home" class="font-bold text-base text-black py-2 mx-8 flex group-hover:text-sky-300 group-hover:translate-x-6 lg:group-hover:translate-x-0 lg:duration-75 duration-500 dark:text-white ">Home</a>
+                            </li>
+                            <li class="group ">
+                                <a href="#aboute" class="font-bold text-base text-black py-2 mx-8 flex group-hover:text-sky-300 group-hover:translate-x-6 lg:group-hover:translate-x-0 lg:duration-75 duration-500 dark:text-white "> Aboute</a>
+                            </li>
+                            <li class="group lg:navigasi">
+                                <a href="#Services" class="font-bold text-base text-black py-2 mx-8 flex group-hover:text-sky-300 group-hover:translate-x-6 lg:group-hover:translate-x-0 lg:duration-75 duration-500 dark:text-white ">Services</a>
+                            </li>
+                            <li class="group lg:navigasi">
+                                <a href="#work" class="font-bold text-base text-black py-2 mx-8 flex group-hover:text-sky-300 group-hover:translate-x-6 lg:group-hover:translate-x-0 lg:duration-75 duration-500 dark:text-white ">Work</a>
+                            </li>
+                            <li class="group lg:navigasi">
+                                <a href="#blog" class="font-bold text-base text-black py-2 mx-8 flex group-hover:text-sky-300 group-hover:translate-x-6 lg:group-hover:translate-x-0 lg:duration-75 duration-500 dark:text-white ">Blog</a>
+                            </li>
+                            <li class="group lg:navigasi">
+                                <a href="#contact" class="font-bold text-base text-black py-2 mx-8 flex group-hover:text-sky-300 group-hover:translate-x-6 lg:group-hover:translate-x-0 lg:duration-75 duration-500 dark:text-white">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+   <section id="home" class="pt-28 lg:pt-32 ">
+       <div class="container  ">
+           <div class="flex flex-wrap ml-3">
+                <div class="w-full self-center  md:w-3/5">
+                    <h3 class="font-semibold text-2xl  inline-block lg:text-4xl xl:font-bold text-1">HELLO<div class="w-48 h-1  bg-slate-800 block ml-20 -mt-4 lg:ml-32 xl:w-[380px] lg:w-[280px] dark:bg-white"></div></h3>
+                    <h2 class="font-extrabold text-[32px] xl:text-6xl lg:text-5xl text-2">I'am <span class="text-transparent bg-gradient-to-t from-sky-500 to-violet-500 bg-clip-text text-2">Bagas Musaid</span></h2>
+                    <h4 class="font-semibold mt-1 lg:text-2xl lg:mt-2 text-3"></h4>
+                    <a href="#" class="py-2 px-6 mt-4 bg-sky-500 rounded-lg shadow-xl shadow-sky-200 font-bold text-white text-base inline-block hover:bg-sky-400 dark:shadow-none button-home">Contact</a>
+                    <div class="flex items-center mt-5 lg:mt-10 icon-home">
+                        <a href="https://www.facebook.com/profile.php?id=100050176680708" target="_blank" class="mr-3  text-slate-400  hover:text-sky-300 lg:mr-4 ">
+                            <svg role="img" width="25" viewBox="0 0 24 24" class="fill-current" xmlns="http://www.w3.org/2000/svg"><title>Facebook</title><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/musaid_23" target="_blank" class="mr-3  text-slate-400  hover:text-sky-300 lg:mr-4 ">
+                            <svg role="img" width="25" viewBox="0 0 24 24" class="fill-current" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+                        </a>
+                        <a href="https://twitter.com/Bagas81841239?t=WCE6eZ1n1_CCaBH_prx64Q&s=09" target="_blank" class="mr-3  text-slate-400  hover:text-sky-300 lg:mr-4 ">
+                            <svg role="img" width="25" viewBox="0 0 24 24" class="fill-current" xmlns="http://www.w3.org/2000/svg"><title>Twitter</title><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                        </a>
+                        <a href="https://t.me/musaidbagas" target="_blank" class="mr-3  text-slate-400  hover:text-sky-300 lg:mr-4 ">
+                            <svg role="img" viewBox="0 0 24 24" class="fill-current" width="25" xmlns="http://www.w3.org/2000/svg"><title>Telegram</title><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                        </a>
+                        <a href="https://discord.gg/UNsCaqMy" target="_blank" class=" text-slate-400  hover:text-sky-300 lg:mr-4">
+                            <svg role="img" width="25" viewBox="0 0 24 24" class="fill-current" xmlns="http://www.w3.org/2000/svg"><title>Discord</title><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full  md:w-2/5 self-end" data-aos="zoom-in-up" data-aos-duration="2000" data-aos-delay="400">
+                    <img src="./dist/img/img1-removebg-preview.png" alt="" class="mx-auto my-2 lg:-mr-3">
+                </div>
+                
+            </div>
+        </div>
+   </section>
+  
+   <section class="mb-12 pt-20" id="aboute">
+       <div class="container">
+           <div class="flex flex-wrap pt-6 md:pt-16" >
+               <div class="title mb-10 ">
+                    <h2 class="font-bold text-2xl lg:text-4xl text-center" data-aos="fade-down" data-aos-duration="1000">Aboute Me</h2>
+                    <p class="text-base text-slate-400 lg:text-md text-center mx-2 mt-2 mb-16 lg:mx-64 block" data-aos="fade-down" data-aos-duration="1000">
+                        My name is Bagas Musaid, call me <span class="text-slate-600 font-semibold dark:text-white"> Bagas</span>. I am a student from the yogyakarta university of technology. I have been studying <span class="text-slate-600 font-semibold dark:text-white">Web design</span> for more than 2 months and still like to do it every day.</p>
+                    <div class="card md:flex w-full  border dark:border-slate-600  mx-auto rounded-xl shadow-xl dark:bg-slate-600 dark:text-white" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="aboute-1 md:w-1/2  md:relative">
+                             <div class=" lg:-ml-3 mt-12 mx-auto rounded-full border border-slate-600 bg-slate-200 w-20 h-20 p-2 md:right-0 md:absolute md:mr-10 md:mt-14">
+                                 <img src="./dist/img/img-5.png" alt="" class=" mx-auto  w-16 h-16 ">
+                             </div>
+                             <div class="my-6 md:pr-10 md:mt-36 md:float-right">
+                                 <h6 class="font-semibold text-center md:text-lg md:text-right my-1 block">FullName : <Span class="text-slate-400">Bagas Musaid</Span></h6>
+                                 <h6 class="font-semibold text-center my-1 md:text-lg md:text-right">Birthday : <Span class="text-slate-400">23 oktober 2003</Span></h6>
+                                 <h6 class="font-semibold  text-center my-1 md:text-lg md:text-right">Phone Number : <Span class="text-slate-400">085812769235</Span></h6>
+                                 <h6 class="font-semibold text-center md:text-lg md:text-right">E-mail : <Span class="text-slate-400 my-1">bagasmusaid23@gmail.com</Span></h6>
+                             </div>
+     
+                        </div>
+                        
+                        <div class="md:w-1/2 px-4 mt-6 lg:pr-8 md:float-right">
+                            <div class="flex flex-wrap mt-5 justify-center lg:justify-start ">
+                                 <button class="  tab h-10 px-4 py-2 -mb-px text-sm text-center text-gray-600 bg-transparent border-b-2 border-transparent hover:border-gray-400 sm:text-base  whitespace-nowrap focus:outline-none dark:text-white" id="Skill">Skills</button>
+                                 <button class="  tab h-10 px-4 py-2 -mb-px text-sm text-center text-gray-600 bg-transparent border-b-2 border-transparent sm:text-base whitespace-nowrap cursor-base focus:outline-none hover:border-gray-400 dark:text-white" id="experience">Experience</button> 
+                                <button class="  tab h-10 px-4 py-2 -mb-px text-sm text-center text-gray-600 bg-transparent border-b-2 border-transparent sm:text-base whitespace-nowrap cursor-base focus:outline-none hover:border-gray-400 dark:text-white" id="education">Education</button>
+                            </div>
+                            <div class="mb-8  " id="Skills">
+                                <h5 class="font-bold my-2  md:mt-4">HTML<span class="float-right">70%</span></h5>
+                                <div class="mt-2 progres w-full h-4 border rounded-full">
+                                    <div class="w-full h-4 border rounded-full progres-bar duration-1000 ease-linear " data-done="70"></div>
+                                </div>
+                                <h5 class="font-bold my-2 md:mt-4">CSS<span class="float-right">50%</span></h5>
+                                <div class="mt-2 progres w-full h-4 border rounded-full">
+                                     <div class="w-full h-4 border rounded-full progres-bar duration-1000 ease-linear" data-done="50"></div>
+                                </div>
+                                <h5 class="font-bold my-2  md:mt-4">JavaScript<span class="float-right">30%</span></h5>
+                                <div class="mt-2 progres w-full h-4 border rounded-full">
+                                     <div class="w-full h-4 border rounded-full progres-bar duration-1000 ease-linear" data-done="30"></div>
+                                </div>
+                            </div>
+                            <div id="experiences" class="my-8  hidden">
+                                <div class="flex">
+                                     <div class="h-[200px] w-1 border bg-slate-200 relative -mr-10 rounded-lg">
+                                          <div class="w-5 h-5 rounded-full absolute mt-6 -ml-[9px] bg-blue-500"></div>
+                                     </div>
+                                     <div class="ml-14  my-4 lg:mx-16">
+                                           <h4 class="font-bold text-xl my-1">Developer</h4>
+                                           <h6 class="text-base text-slate-500 mb-3">2020-2022(2 year Experience)</h6>
+                                           <p class="text-justify text-slate-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque quae voluptates nostrum minima vero veritatis cupiditate dignissimos porro quisquam adipisci.</p>
+                                     </div>
+                                </div>
+                            </div>
+                            <div id="Educations" class="my-8 hidden">
+                                <div class="flex">
+                                      <div class="h-[320px] w-1 border bg-slate-200 relative -mr-10 rounded-lg">
+                                          <div class="w-5 h-5 rounded-full absolute mt-6 -ml-[9px] bg-blue-500 circle"></div>
+                                          <div class="w-5 h-5 rounded-full absolute mt-44 -ml-[9px] bg-blue-500"></div>
+                                      </div>
+                                     <div class="block">
+                                          <div class="ml-14  my-5 lg:mx-16">
+                                              <h4 class="font-bold text-md my-1">SMK N 1 TRUCUK</h4>
+                                              <h6 class="text-base text-slate-500 mb-2">2018-2021<span class="ml-2">(3 year)</span></h6>
+                                              <p class="text-justify text-slate-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ab nam nihil, distinctio delectus similique.</p>
+                                          </div>
+                                          <div class="ml-14  my-4 lg:mx-16 md:mt-6 lg:mt-11">
+                                              <h4 class="font-bold text-md md:my-2 mt-12">UNIVERSITAS TEKONOLOGI YOGYAKARTA</h4>
+                                              <h6 class="text-base text-slate-500 mb-2">2021-Now</h6>
+                                              <p class="text-justify text-slate-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ab nam nihil, distinctio delectus similique.</p>
+                                          </div>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+              
+           </div>
+       </div>
+   </section>
+   <section id="Services" class="my-8 bg-slate-100 dark:bg-slate-700">
+       <div class="container py-16">
+           <div class="flex">
+               <div class="servise">
+                   <h6 class="text-center font-semibold text-slate-500" data-aos="fade-down" data-aos-duration="1000">WHAT WE OFFER</h6>
+                   <h2 class="text-center font-bold text-2xl lg:text-4xl" data-aos="fade-down" data-aos-duration="1000">Affordable Services</h2>
+                   <p class="text-center text-base text-slate-500 block mx-2 lg:mx-64" data-aos="fade-down" data-aos-duration="1000">A Private Limited is the most popular type of partnership Malta. The limited liability is, in fact, the only type of company allowed by Companies.</p>
+                   <div class="card-servise my-8 md:flex md:gap-7 mx-2 pt-6 md:pt-16 ">
+                       <div class="card-1 border dark:border-slate-800 rounded-xl p-8 w-full my-4 bg-white dark:bg-slate-800 drop-shadow-lg md:hover:-translate-y-4 md:hover:duration-500 transition-all ease-in-out " data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="50">
+                            <div class="p-3 bg-violet-200 rounded-lg w-14 text-violet-400">
+                                <?xml version="1.0" ?><svg  viewBox="0 0 512 512" width="30" class="block mx-auto fill-current" xmlns="http://www.w3.org/2000/svg"><title/><path d="M256,32C174,69.06,121.38,86.46,32,96c0,77.59,5.27,133.36,25.29,184.51a348.86,348.86,0,0,0,71.43,112.41C178.32,445.58,232.89,473.32,256,480c23.11-6.68,77.68-34.42,127.28-87.08a348.86,348.86,0,0,0,71.43-112.41C474.73,229.36,480,173.59,480,96,390.62,86.46,338,69.06,256,32Z"/></svg>
+                            </div>
+                            <h3 class="font-bold my-3 dark:text-white">Research & Analysis</h3>
+                            <p class="text-slate-500 dark:text-slate-300">We use a customized application specifically designed a testing gnose to keep away for people.</p>
+                        </div>
+                       <div class="card-1 border rounded-xl p-8 w-full my-4 bg-white drop-shadow-lg md:hover:-translate-y-4 md:hover:duration-500  transition-all ease-in-out dark:bg-slate-800 dark:border-slate-800 " data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="100">
+                            <div class="p-3 bg-red-200 rounded-lg w-14 text-red-500">
+                                <svg role="img" viewBox="0 0 24 24" class="block mx-auto fill-current"  width="30" xmlns="http://www.w3.org/2000/svg"><title>Appwrite</title><path d="M7.834 4C4.094 4.09.584 6.816.06 11.014a7.993 7.994 0 0 0 3.122 7.368c2.757 2.08 6.198 2.047 8.82.538a7.993 7.994 0 1 0-.005-13.834A7.84 7.84 0 0 0 7.831 4zm.122 1.485a6.525 6.526 0 0 1 6.484 5.537c0 .007.002.013.003.02.02.143.037.287.048.433l.006.054c.01.15.016.303.017.456 0 .084-.005.168-.008.252-.002.058-.003.117-.007.175a6.68 6.68 0 0 1-.03.335l-.01.08c-.015.12-.033.24-.055.358l-.01.048c-.022.124-.05.248-.08.37l-.006.025a6.578 6.58 0 0 1-.41 1.15c-.007.016-.017.033-.024.05a6.538 6.54 0 0 1-1.62 2.115l-.054.046c-.08.067-.162.13-.245.194-.055.042-.11.084-.168.125-.04.03-.08.056-.122.084a6.68 6.68 0 0 1-1.123.612 6.517 6.518 0 0 1-6.468-.8C.069 14.184.838 7.96 5.457 6.004a6.512 6.513 0 0 1 2.499-.518zm.61 3.72c-.183 0-.343.013-.352.032-.01.024-.132.504-.264 1.074-.136.57-.353 1.468-.475 2-.235.974-.377 1.613-.377 1.698 0 .023.146.042.325.042h.325l.146-.65.423-1.796c.15-.635.334-1.408.405-1.72.07-.31.14-.591.155-.624.014-.043-.066-.057-.31-.057zm-2.441 1.6-.438.47-.433.47.127.15c.07.086.264.298.428.472l.302.32h.856l-.405-.438c-.221-.235-.405-.46-.405-.49 0-.032.17-.243.377-.47.207-.23.376-.428.376-.45 0-.02-.178-.034-.395-.034zm3.27 0c-.231 0-.415.014-.415.028s.08.103.18.202c.366.367.624.678.61.74-.009.032-.188.253-.405.484l-.39.428h.437l.438-.005.4-.438c.22-.244.4-.46.4-.49 0-.023-.188-.244-.424-.493l-.423-.457z"/></svg>
+                            </div>    
+                            <h3 class="font-bold my-3">Web Development</h3>
+                            <p class="text-slate-500 dark:text-slate-300">We use a customized application specifically designed a testing gnose to keep away for people.</p>
+                       </div>
+                       
+                       <div class="card-1 border rounded-xl p-8 w-full my-4 bg-white drop-shadow-lg md:hover:-translate-y-4 md:hover:duration-500  transition-all ease-in-out dark:bg-slate-800 dark:border-slate-800   " data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="150">
+                            <div class="p-3 bg-amber-200 rounded-lg w-14 text-amber-400">
+                                <svg role="img" viewBox="0 0 24 24" width="30" class="block mx-auto fill-current" xmlns="http://www.w3.org/2000/svg"><title>Buffer</title><path d="M1.371 5.476L11.943 0l10.686 5.476-10.686 5.495zm3.36 4.81l7.212 3.547 7.288-3.547 3.398 1.655-10.686 5.202L1.371 11.94zm0 6.171l7.212 3.911 7.288-3.91 3.398 1.815L11.943 24 1.371 18.273z"/></svg>
+                            </div>
+                            <h3 class="font-bold my-3">Network Management</h3>
+                            <p class="text-slate-500 dark:text-slate-300">We use a customized application specifically designed a testing gnose to keep away for people.</p>
+                       </div>
+                   </div>
+                   <div class="card-servise md:my-8 md:flex md:gap-7 mx-2 ">
+                        <div class="card-1 border rounded-xl p-8 w-full my-4 md:my-0 bg-white drop-shadow-lg md:hover:-translate-y-4 md:hover:duration-500  transition-all ease-in-out dark:bg-slate-800 dark:border-slate-800   " data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="50">
+                            <div class="p-3 bg-sky-200 rounded-lg w-14 text-sky-400">
+                                <?xml version="1.0" ?><svg  viewBox="0 0 512 512" width="30" class="block mx-auto fill-current" xmlns="http://www.w3.org/2000/svg"><title/><path d="M488,384H24a8,8,0,0,1-8-8V88a8,8,0,0,1,8-8H488a8,8,0,0,1,8,8V376A8,8,0,0,1,488,384Z"/><rect height="32" rx="4" ry="4" width="288" x="112" y="400"/></svg>
+                            </div>
+                            <h3 class="font-bold my-3">UI/UX Development</h3>
+                            <p class="text-slate-500 dark:text-slate-300">We use a customized application specifically designed a testing gnose to keep away for people.</p>
+                       </div>
+                       <div class="card-1 border rounded-xl p-8 w-full my-4 md:my-0 bg-white drop-shadow-lg md:hover:-translate-y-4 md:hover:duration-500 transition-all ease-in-out dark:bg-slate-800 dark:border-slate-800   " data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="100">
+                            <div class="p-3 bg-teal-200 rounded-lg w-14 text-teal-400">
+                                <?xml version="1.0" ?><svg  viewBox="0 0 512 512" width="30" class="block mx-auto fill-current" xmlns="http://www.w3.org/2000/svg"><title/><path d="M426,266a54.07,54.07,0,0,0-49.3,32H351.86l-27-81a22,22,0,0,0-42,.92L245.66,348.12l-48-281.74a22,22,0,0,0-43-1.72L94.82,298H32v44h80a22,22,0,0,0,21.34-16.66L171.69,172,218.3,445.62A22,22,0,0,0,238.76,464c.42,0,.82,0,1.24,0a22,22,0,0,0,21.15-16l44.47-149.62L315.13,327A22,22,0,0,0,336,342h40.7A54,54,0,1,0,426,266Z"/></svg>
+                            </div>
+                            <h3 class="font-bold my-3">Mobile App Development</h3>
+                            <p class="text-slate-500 dark:text-slate-300">We use a customized application specifically designed a testing gnose to keep away for people.</p>
+                       </div>
+                       
+                       <div class="card-1 border rounded-xl p-8 w-full my-4 md:my-0 bg-white drop-shadow-lg md:hover:-translate-y-4 md:hover:duration-500  transition-all ease-in-out dark:bg-slate-800 dark:border-slate-800   " data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="150">
+                            <div class="p-3 bg-pink-200 rounded-lg w-14 text-pink-400">
+                                <?xml version="1.0" ?><svg  viewBox="0 0 512 512" width="30" class="block mx-auto fill-current" xmlns="http://www.w3.org/2000/svg"><title/><path d="M497.14,111.38l-81.09,80.84-48.58-48.41L448.56,63c-45.22-22-108.65-22.09-146.2,15.35-35.32,35.2-39.73,90.61-22.54,134.2L99.57,391.37a12,12,0,0,0,0,17l52.27,52.11a12,12,0,0,0,17,0l180-180.5c43.16,16.21,98,11.64,132.74-23C519.08,219.53,519,156.64,497.14,111.38Z"/><path d="M365.45,308.62l-71.83,72,75.53,79.92a10.88,10.88,0,0,0,15.65.21l60-60.46a11,11,0,0,0-.24-15.69Z"/><path d="M119,212c0-4.87-4-9.33-7.45-12.78l-.25-.24-1.54-1.47a1.06,1.06,0,0,1-.26-.8,16.16,16.16,0,0,1,9.52-2c1.27.13,5.91.9,12.4,4.91,3.38,2.09,32.63,30.23,43.93,40.7a11,11,0,0,0,.14,15.35l7.43,7.86,65.66-65.17-8.25-7.84a10.87,10.87,0,0,0-15.31-.06c-23-24.68-29-35.45-31-42.45-4.42-15.47,4.14-28,14-36,5.84-4.62,17.88-8.08,29-9a52.72,52.72,0,0,1,11.61.6c3.47.5,6.3,1.14,7.39,1.4a68.51,68.51,0,0,1,11,4l12-19a88.38,88.38,0,0,0-13.4-17.7c-1.59-1.66-3.31-3.37-5.19-5.1-7.78-7.15-28-19.2-54.59-19.2a117.38,117.38,0,0,0-44.77,8.82c-37.44,15.34-61.88,36.25-73.11,47.35l-.07.07A219.55,219.55,0,0,0,67,128.56c-5.35,7.53-4.77,15.84-4.38,21.34,0,.32,0,.67.07,1a18.41,18.41,0,0,0-10.78-3.5A18,18,0,0,0,39,152.73L2,189.62a6.79,6.79,0,0,0,0,9.6L65,262a6.72,6.72,0,0,0,9.5,0l37.06-37C115,221.56,119,216.86,119,212Z"/></svg>
+                            </div>
+                            <h3 class="font-bold my-3">Network Management</h3>
+                            <p class="text-slate-500 dark:text-slate-300">We use a customized application specifically designed a testing gnose to keep away for people.</p>
+                       </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
+   <section class=" my-20 ">
+       <div class="container">
+           <div class="flex flex-wrap">
+               <div class="counter">
+                   <h6 class="text-center font-semibold text-slate-500" data-aos="fade-down" data-aos-duration="1000">Counter</h6>
+                   <h2 class="text-center font-bold text-2xl lg:text-4xl" data-aos="fade-down" data-aos-duration="1000">Our Achievement</h2>
+                   <p class="text-center text-base text-slate-500 block lg:mx-64" data-aos="fade-down" data-aos-duration="1000">A Private Limited is the most popular type of partnership Malta. The limited liability is, in fact, the only type of company allowed by Companies.</p>
+                    <div class="my-8 md:flex md:gap-7 md:pt-16">
+                        <div class="card-counter border rounded-xl p-8 w-full bg-slate-200 my-4 dark:bg-slate-600 dark:border-slate-600 " data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="50">
+                            <img src="./dist/img/heart.png" alt="" class="block mx-auto">
+                            <h1 class="font-extrabold text-4xl text-center mt-2 dark:text-white">500K +</h1>
+                            <h6 class="text-base text-slate-500 text-center dark:text-slate-400">Happy Clients</h6>
+                        </div>
+                        <div class="card-counter border rounded-xl p-8 w-full bg-slate-200 my-4 dark:bg-slate-600 dark:border-slate-600 " data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="100">
+                            <img src="./dist/img/blueprint.png" alt="" class="block mx-auto">
+                            <h1 class="font-extrabold text-4xl text-center mt-2">400</h1>
+                            <h6 class="text-base text-slate-500 text-center dark:text-slate-400">Project Done</h6>
+                        </div>
+                        <div class="card-counter border rounded-xl p-8 w-full bg-slate-200 my-4 dark:bg-slate-600 dark:border-slate-600 " data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="150">
+                            <img src="./dist/img/star.png" alt="" class="block mx-auto">
+                            <h1 class="font-extrabold text-4xl text-center mt-2">100K +</h1>
+                            <h6 class="text-base text-slate-500 text-center dark:text-slate-400">Clients Review</h6>
+                        </div>
+                        <div class="card-counter border rounded-xl p-8 w-full bg-slate-200 my-4 dark:bg-slate-600 dark:border-slate-600 " data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200">
+                            <img src="./dist/img/idea.png" alt="" class="block mx-auto">
+                            <h1 class="font-extrabold text-4xl text-center mt-2">20 +</h1>
+                            <h6 class="text-base text-slate-500 text-center dark:text-slate-400">Year Experiene</h6>
+                        </div>
+                    </div>
+               </div>
+           </div>
+       </div>
+   </section>
+   <section class="mb-28 bg-slate-100 dark:bg-slate-700" id="work">
+       <div class="container">
+           <div class="relative">
+               <div class="flex flex-wrap mt-8">
+                   <div class="w-1/2" data-aos="fade-right" data-aos-duration="1000">
+                       <h2 class="font-bold text-2xl lg:text-4xl  block pt-10">My Latest Work</h2>
+                       <h6 class="text-base text-slate-500 block mt-2 mb-10 ">Prefect solution for digital experience</h6>
+                   </div>
+                   <div class="mt-10 w-1/2 cursor-pointer">
+                       <div class="flex float-right" data-aos="fade-left" data-aos-duration="1000">
+                            <h4 class="float-right line text-sky-400 lg:font-semibold border-b-2 border-sky-400">More Work</h4>
+                            <?xml version="1.0" ?><svg class="bi bi-arrow-right-short fill-current text-sky-400" fill="currentColor" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg"><path d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" fill-rule="evenodd"/></svg>
+                       </div>
+                   </div>
+               </div>
+               <div class="swiper mySwiper">
+                   <div class="swiper-wrapper  mb-28 " data-aos="zoom-in" data-aos-duration="1000" >
+                       <div class="swiper-slide relative">
+                           <img src="./dist/img/work-1.jpg" alt="" class="rounded-xl">
+                       </div>
+                       <div class="swiper-slide">
+                           <img src="./dist/img/work-2.jpg" alt="" class="rounded-xl">
+                       </div>
+                       <div class="swiper-slide">
+                           <img src="./dist/img/work-3.jpg" alt="" class="rounded-xl">
+                       </div>
+                       <div class="swiper-slide">
+                           <img src="./dist/img/work-4.jpg" alt="" class="rounded-xl">
+                       </div>
+                       <div class="swiper-slide">
+                           <img src="./dist/img/work-5.jpg" alt="" class="rounded-xl">
+                       </div>
+                   </div>
+               </div>
+               <div class="swiper-pagination pb-10"></div>
+
+           </div>
+        
+       </div>
+       
+   </section>
+   <section id="blog" class="mb-24">
+       <div class="container">
+           <div class="flex">
+               <div class="blog">
+                   <h5 class="text-center font-semibold text-slate-500" data-aos="fade-down" data-aos-duration="1000" >Blog</h5>
+                   <h2 class="text-center font-bold text-2xl lg:text-4xl" data-aos="fade-down" data-aos-duration="1000" >Our Regular News</h2>
+                   <p class="text-center text-base text-slate-500 block mx-2 lg:mx-64" data-aos="fade-down" data-aos-duration="1000" >A Private Limited is the most popular type of partnership Malta. The limited liability is, in fact, the only type of company allowed by Companies.</p>
+                   <div class="w-full mb-10 my-8 px-2 lg:flex lg:gap-7">
+
+                       <div class="card-blog bg-slate-50 border rounded-2xl overflow-hidden mt-6 w-full lg:w-1/3 drop-shadow-2xl  dark:bg-slate-600 dark:border-slate-600" data-aos="zoom-out-up" data-aos-duration="500" >
+                           <img class="img-blog p-4 rounded-lg overflow-hidden" src="./dist/img/blog-2.jpg" 
+                           alt="" >
+                           <div class="ml-14 -mt-16 w-20 h-20 rounded-full bg-indigo-500 flex justify-center z-40 absolute border-8 border-slate-50 dark:border-slate-600">
+                            <?xml version="1.0" ?><svg class="fill-current text-white"  viewBox="0 0 512 512" width="40" xmlns="http://www.w3.org/2000/svg"><title/><path d="M256,185a167.85,167.85,0,0,1,134.9-18.28C382.36,99.83,325.12,48,256,48S129.64,99.83,121.1,166.67A167.85,167.85,0,0,1,256,185Z"/><path d="M336,331.73a167.51,167.51,0,0,1-52.37,118.08A135,135,0,0,0,344,464c75,0,136-61,136-136a136,136,0,0,0-59.06-112.08A168.53,168.53,0,0,1,336,331.73Z"/><path d="M283.58,206.19a167.87,167.87,0,0,1,49.36,89.89A136.14,136.14,0,0,0,391,200.38a135.87,135.87,0,0,0-107.43,5.81Z"/><path d="M176.05,331.73a168.53,168.53,0,0,1-85-115.81A136,136,0,0,0,32,328c0,75,61,136,136,136a135,135,0,0,0,60.42-14.19A167.51,167.51,0,0,1,176.05,331.73Z"/><path d="M179.06,296.08a167.87,167.87,0,0,1,49.36-89.89A135.87,135.87,0,0,0,121,200.38,136.14,136.14,0,0,0,179.06,296.08Z"/><path d="M302.9,345.33a168.22,168.22,0,0,1-93.8,0A135.9,135.9,0,0,0,256,431.6,135.9,135.9,0,0,0,302.9,345.33Z"/><path d="M209,311.62a136,136,0,0,0,94,0,135.93,135.93,0,0,0-47-87.22A135.93,135.93,0,0,0,209,311.62Z"/></svg>
+                           </div>
+                           <h2 class="text-2xl font-bold my-4 mx-4 inline-block">We makes UI/UX design very easy for you.</h2>
+                           <p class="mx-4 mb-5 text-justify text-slate-500 text-base dark:text-slate-300">He nicked it tickety boo harry the cras bargy chap mush spiffing spend a penny.</p>
+                           <button class="py-2 px-4 mx-4 mb-4 bg-sky-500 rounded-xl text-white font-semibold flex justify-center items-center hover:bg-sky-700"><a href="#"> Learn more</a><?xml version="1.0" ?><svg class="fill-current text-white mt-1 ml-1"  viewBox="0 0 512 512" width="20" xmlns="http://www.w3.org/2000/svg"><title/><polyline points="268 112 412 256 268 400" style="fill:none;stroke:white;stroke-linecap:square;stroke-miterlimit:10;stroke-width:48px"/><line style="fill:none;stroke:white;stroke-linecap:square;stroke-miterlimit:10;stroke-width:48px" x1="392" x2="100" y1="256" y2="256"/></svg></button>
+                       </div>
+                       <div class="card-blog bg-slate-50 border shadow-lg rounded-2xl overflow-hidden mt-6 w-full lg:w-1/3 drop-shadow-2xl dark:bg-slate-600 dark:border-slate-600" data-aos="zoom-out-up" data-aos-duration="500" >
+                           <img class="img-blog p-4 rounded-lg overflow-hidden z-10 relative" src="./dist/img/blog-3.jpg" 
+                           alt="" >
+                           <div class="ml-14 -mt-16 w-20 h-20 rounded-full bg-orange-500 flex justify-center z-40 absolute border-8 border-slate-50 dark:border-slate-600">
+                            <?xml version="1.0" ?><svg viewBox="0 0 512 512" class="fill-current text-white" width="40" xmlns="http://www.w3.org/2000/svg"><path d="M48,366.92,240,480V284L48,170ZM192,288c8.84,0,16,10.75,16,24s-7.16,24-16,24-16-10.75-16-24S183.16,288,192,288ZM96,320c8.84,0,16,10.75,16,24s-7.16,24-16,24-16-10.75-16-24S87.16,320,96,320Z"/><path d="M272,284V480L464,366.92V170Zm48,140c-8.84,0-16-10.75-16-24s7.16-24,16-24,16,10.75,16,24S328.84,424,320,424Zm0-88c-8.84,0-16-10.75-16-24s7.16-24,16-24,16,10.75,16,24S328.84,336,320,336Zm96,32c-8.84,0-16-10.75-16-24s7.16-24,16-24,16,10.75,16,24S424.84,368,416,368Zm0-88c-8.84,0-16-10.75-16-24s7.16-24,16-24,16,10.75,16,24S424.84,280,416,280Zm32,77.64h0Z"/><path d="M256,32,64,144,256,256,448,144Zm0,120c-13.25,0-24-7.16-24-16s10.75-16,24-16,24,7.16,24,16S269.25,152,256,152Z"/></svg>
+                           </div>
+                           <h2 class="text-2xl font-bold my-4 mx-4 inline-block">Current world design trends know easily.</h2>
+                           <p class="mx-4 mb-5 text-justify text-slate-500 text-base dark:text-slate-300">He nicked it tickety boo harry the cras bargy chap mush spiffing spend a penny.</p>
+                           <button class="py-2 px-4 mx-4 mb-4 bg-sky-500 rounded-xl text-white font-semibold flex justify-center items-center hover:bg-sky-700"><a href="#"> Learn more</a><?xml version="1.0" ?><svg class="fill-current text-white mt-1 ml-1"  viewBox="0 0 512 512" width="20" xmlns="http://www.w3.org/2000/svg"><title/><polyline points="268 112 412 256 268 400" style="fill:none;stroke:white;stroke-linecap:square;stroke-miterlimit:10;stroke-width:48px"/><line style="fill:none;stroke:white;stroke-linecap:square;stroke-miterlimit:10;stroke-width:48px" x1="392" x2="100" y1="256" y2="256"/></svg></button>
+                       </div>
+                       <div class="card-blog bg-slate-50 border shadow-lg rounded-2xl overflow-hidden mt-6 w-full lg:w-1/3 drop-shadow-2xl dark:bg-slate-600 dark:border-slate-600" data-aos="zoom-out-up" data-aos-duration="500">
+                           <img class="img-blog p-4 rounded-lg overflow-hidden" src="./dist/img/blog-4.jpg" 
+                           alt="" >
+                           <div class="ml-14 -mt-16 w-20 h-20 rounded-full bg-emerald-500 flex justify-center z-40 absolute border-8 border-slate-50 dark:border-slate-600">
+                            <?xml version="1.0" ?><svg class="fill-current text-white" viewBox="0 0 512 512" width="40" xmlns="http://www.w3.org/2000/svg"><title/><path d="M448,48,416,32,384,48,352,32,320,48,288,32,256,48,224,32,192,48,144,32V288s0,.05,0,.05H368V424c0,30.93,33.07,56,64,56h12c30.93,0,52-25.07,52-56V32ZM272.5,240l-.5-32H431.5l.5,32Zm-64-80-.5-32H431.5l.5,32Z"/><path d="M336,424V320H16v32c0,50.55,5.78,71.62,14.46,87.63C45.19,466.8,71.86,480,112,480H368S336,460,336,424Z"/></svg>
+                           </div>
+                           <h2 class="text-2xl font-bold my-4 mx-4 inline-block">We calculate clients demand for research.</h2>
+                           <p class="mx-4 mb-5 text-justify text-slate-500 text-base dark:text-slate-300">He nicked it tickety boo harry the cras bargy chap mush spiffing spend a penny.</p>
+                           <button class="py-2 px-4 mx-4 mb-4 bg-sky-500 rounded-xl text-white font-semibold flex justify-center items-center hover:bg-sky-700"><a href="#"> Learn more</a><?xml version="1.0" ?><svg class="fill-current text-white mt-1 ml-1"  viewBox="0 0 512 512" width="20" xmlns="http://www.w3.org/2000/svg"><title/><polyline points="268 112 412 256 268 400" style="fill:none;stroke:white;stroke-linecap:square;stroke-miterlimit:10;stroke-width:48px"/><line style="fill:none;stroke:white;stroke-linecap:square;stroke-miterlimit:10;stroke-width:48px" x1="392" x2="100" y1="256" y2="256"/></svg></button>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
+   <section id="contact">
+       <div class="container">
+           <div class="">
+               <div class="contact">
+                   <h5 class="text-center font-semibold text-slate-500"  data-aos="fade-down" data-aos-duration="1000" >Contact</h5>
+                   <h2 class="text-center font-bold text-2xl lg:text-4xl"  data-aos="fade-down" data-aos-duration="1000" >Contact Me More</h2>
+                   <p class="text-center text-base text-slate-500 block mx-2 lg:mx-64"  data-aos="fade-down" data-aos-duration="1000" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore itaque totam odio quibusdam voluptatibus, voluptatem iusto mollitia?</p>
+                   <div class="sub-contact md:flex mt-16">
+                       <div class="addres w-full my-5">
+                        <svg role="img" viewBox="0 0 24 24" width="40" class="fill-current mx-auto text-red-500" xmlns="http://www.w3.org/2000/svg"><title>Google Maps</title><path d="M19.527 4.799c1.212 2.608.937 5.678-.405 8.173-1.101 2.047-2.744 3.74-4.098 5.614-.619.858-1.244 1.75-1.669 2.727-.141.325-.263.658-.383.992-.121.333-.224.673-.34 1.008-.109.314-.236.684-.627.687h-.007c-.466-.001-.579-.53-.695-.887-.284-.874-.581-1.713-1.019-2.525-.51-.944-1.145-1.817-1.79-2.671L19.527 4.799zM8.545 7.705l-3.959 4.707c.724 1.54 1.821 2.863 2.871 4.18.247.31.494.622.737.936l4.984-5.925-.029.01c-1.741.601-3.691-.291-4.392-1.987a3.377 3.377 0 0 1-.209-.716c-.063-.437-.077-.761-.004-1.198l.001-.007zM5.492 3.149l-.003.004c-1.947 2.466-2.281 5.88-1.117 8.77l4.785-5.689-.058-.05-3.607-3.035zM14.661.436l-3.838 4.563a.295.295 0 0 1 .027-.01c1.6-.551 3.403.15 4.22 1.626.176.319.323.683.377 1.045.068.446.085.773.012 1.22l-.003.016 3.836-4.561A8.382 8.382 0 0 0 14.67.439l-.009-.003zM9.466 5.868L14.162.285l-.047-.012A8.31 8.31 0 0 0 11.986 0a8.439 8.439 0 0 0-6.169 2.766l-.016.018 3.665 3.084z"/></svg>
+                           <h6 class="font-semibold text-center text-lg">ADDRESS</h6>
+                           <p class="text-center text-sm md:text-base">Klaten,Jawa Tengah,Indonesia</p>
+                           <form action="" class="mx-4 my-4">
+                                <label for="name">
+                                    <input type="text" id="email" placeholder="Name" class="border inline-block  border-slate-600 px-4 py-2 w-full shadow rounded text-sm focus:outline-none focus:ring-1 focus:ring-sky-300 invalid:text-red-500 invalid:focus:ring-red-700 invalid:focus:border-red-700 dark:bg-slate-600 dark:text-white">
+                                </label>
+                            </form>
+                       </div>
+                       <div class=" w-full my-5">
+                           <?xml version="1.0" ?><svg viewBox="0 0 512 512" width="40" class="fill-current mx-auto text-emerald-400" xmlns="http://www.w3.org/2000/svg"><title/><path d="M478.94,370.14c-5.22-5.56-23.65-22-57.53-43.75-34.13-21.94-59.3-35.62-66.52-38.81a3.83,3.83,0,0,0-3.92.49c-11.63,9.07-31.21,25.73-32.26,26.63-6.78,5.81-6.78,5.81-12.33,4-9.76-3.2-40.08-19.3-66.5-45.78s-43.35-57.55-46.55-67.3c-1.83-5.56-1.83-5.56,4-12.34.9-1.05,17.57-20.63,26.64-32.25a3.83,3.83,0,0,0,.49-3.92c-3.19-7.23-16.87-32.39-38.81-66.52-21.78-33.87-38.2-52.3-43.76-57.52A3.9,3.9,0,0,0,138,32.2,322.35,322.35,0,0,0,82,57.65,338,338,0,0,0,33.35,92a3.83,3.83,0,0,0-1.26,3.74c2.09,9.74,12.08,50.4,43.08,106.72,31.63,57.48,53.55,86.93,100,133.22S252,405.21,309.54,436.84c56.32,31,97,41,106.72,43.07a3.86,3.86,0,0,0,3.75-1.26A337.73,337.73,0,0,0,454.35,430a322.7,322.7,0,0,0,25.45-56A3.9,3.9,0,0,0,478.94,370.14Z"/></svg>
+                           <h6 class="font-semibold text-center text-lg">PHONE NUMBER</h6>
+                           <p class="text-center text-sm md:text-base">085812769235</p>
+                           <form action="" class="mx-4 my-4">
+                               <label for="NUMBER">
+                                   <input type="number" id="email" placeholder="Phone" class="border border-slate-600 px-4 py-2 w-full shadow rounded text-sm focus:outline-none focus:ring-1 focus:ring-sky-300 invalid:text-red-500 invalid:focus:ring-red-700 invalid:focus:border-red-700 peer dark:bg-slate-600 dark:text-white">
+                                </label>
+                           </form>
+                       </div>  
+                       <div class=" w-full my-5">
+                            <?xml version="1.0" ?><svg viewBox="0 0 512 512" width="40" class="fill-current mx-auto text-orange-400" xmlns="http://www.w3.org/2000/svg"><title/><path d="M384,32a64,64,0,0,0-57.67,91.73L255.5,204.55l-70.19-80.1A64,64,0,1,0,128,160c1.1,0,2.2,0,3.29-.08L224,265.7v94.91a64,64,0,1,0,64,0V264.56l91.78-104.71c1.39.09,2.8.15,4.22.15a64,64,0,0,0,0-128ZM96,96a32,32,0,1,1,32,32A32,32,0,0,1,96,96ZM256,448a32,32,0,1,1,32-32A32,32,0,0,1,256,448ZM384,128a32,32,0,1,1,32-32A32,32,0,0,1,384,128Z"/></svg>
+                           <h6 class="font-semibold text-center text-lg">WEBSITE</h6>
+                           <p class="text-center text-sm md:text-base">BagasMusaid23.com</p>
+                           <form action="" class="mx-4 my-4">
+                               <label for="email">
+                                   <input type="email" id="email" placeholder="Email" class="border border-slate-600 px-4 py-2 w-full shadow rounded text-sm focus:outline-none focus:ring-1 focus:ring-sky-300 invalid:text-red-500 invalid:focus:ring-red-700 invalid:focus:border-red-700 peer dark:bg-slate-600 dark:text-white">
+                                   <p class="text-sm m-1 text-red-500 invisible peer-invalid:visible px-2">Email tidak valid</p>
+                               </label>
+                           </form>
+                       </div>  
+                   </div>
+                   <div class="w-full md:-mt-8">
+                        <form action="" class="mx-4">
+                            <label for="">
+                                <input type="text" placeholder="Comment" class="block w-full h-40 px-4  text-gray-700 bg-white border rounded-md border-slate-600 dark:border-gray-600  dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:bg-slate-600 dark:text-white">
+                            </label>
+                        </form>
+                    </div>
+                    <div class="flex justify-center md:float-right mt-6 mx-4">
+                        <button class="px-4 py-2 text-white transition-colors duration-200 transform bg-sky-500 rounded-md hover:bg-sky-300 focus:outline-none focus:bg-sky-600">Send Message</button>
+                    </div>
+               </div>
+           </div>
+       </div>
+   </section>
+   <section class="block mt-36">
+        <footer class="flex flex-col items-center justify-between px-6 py-4 bg-slate-800 dark:bg-gray-900 sm:flex-row  md:h-20 ">
+            <a href="#" class="text-xl font-bold text-white dark:text-white hover:text-gray-700 dark:hover:text-gray-300">BAGAS MUSAID</a>
+
+            <p class="py-2 text-white dark:text-white sm:py-0">All rights reserved</p>
+
+            <div class="flex -mx-2">
+                <a href="#" class="mx-2 text-white dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Reddit">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg"><title>Reddit</title>
+                        <path
+                            d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C21.9939 17.5203 17.5203 21.9939 12 22ZM6.807 10.543C6.20862 10.5433 5.67102 10.9088 5.45054 11.465C5.23006 12.0213 5.37133 12.6558 5.807 13.066C5.92217 13.1751 6.05463 13.2643 6.199 13.33C6.18644 13.4761 6.18644 13.6229 6.199 13.769C6.199 16.009 8.814 17.831 12.028 17.831C15.242 17.831 17.858 16.009 17.858 13.769C17.8696 13.6229 17.8696 13.4761 17.858 13.33C18.4649 13.0351 18.786 12.3585 18.6305 11.7019C18.475 11.0453 17.8847 10.5844 17.21 10.593H17.157C16.7988 10.6062 16.458 10.7512 16.2 11C15.0625 10.2265 13.7252 9.79927 12.35 9.77L13 6.65L15.138 7.1C15.1931 7.60706 15.621 7.99141 16.131 7.992C16.1674 7.99196 16.2038 7.98995 16.24 7.986C16.7702 7.93278 17.1655 7.47314 17.1389 6.94094C17.1122 6.40873 16.6729 5.991 16.14 5.991C16.1022 5.99191 16.0645 5.99491 16.027 6C15.71 6.03367 15.4281 6.21641 15.268 6.492L12.82 6C12.7983 5.99535 12.7762 5.993 12.754 5.993C12.6094 5.99472 12.4851 6.09583 12.454 6.237L11.706 9.71C10.3138 9.7297 8.95795 10.157 7.806 10.939C7.53601 10.6839 7.17843 10.5422 6.807 10.543ZM12.18 16.524C12.124 16.524 12.067 16.524 12.011 16.524C11.955 16.524 11.898 16.524 11.842 16.524C11.0121 16.5208 10.2054 16.2497 9.542 15.751C9.49626 15.6958 9.47445 15.6246 9.4814 15.5533C9.48834 15.482 9.52348 15.4163 9.579 15.371C9.62737 15.3318 9.68771 15.3102 9.75 15.31C9.81233 15.31 9.87275 15.3315 9.921 15.371C10.4816 15.7818 11.159 16.0022 11.854 16C11.9027 16 11.9513 16 12 16C12.059 16 12.119 16 12.178 16C12.864 16.0011 13.5329 15.7863 14.09 15.386C14.1427 15.3322 14.2147 15.302 14.29 15.302C14.3653 15.302 14.4373 15.3322 14.49 15.386C14.5985 15.4981 14.5962 15.6767 14.485 15.786V15.746C13.8213 16.2481 13.0123 16.5208 12.18 16.523V16.524ZM14.307 14.08H14.291L14.299 14.041C13.8591 14.011 13.4994 13.6789 13.4343 13.2429C13.3691 12.8068 13.6162 12.3842 14.028 12.2269C14.4399 12.0697 14.9058 12.2202 15.1478 12.5887C15.3899 12.9572 15.3429 13.4445 15.035 13.76C14.856 13.9554 14.6059 14.0707 14.341 14.08H14.306H14.307ZM9.67 14C9.11772 14 8.67 13.5523 8.67 13C8.67 12.4477 9.11772 12 9.67 12C10.2223 12 10.67 12.4477 10.67 13C10.67 13.5523 10.2223 14 9.67 14Z">
+                        </path>
+                    </svg>
+                </a>
+
+                <a href="#" class="mx-2 text-white dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300"
+                    aria-label="Facebook">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg"><title>Facebok</title>
+                        <path
+                            d="M2.00195 12.002C2.00312 16.9214 5.58036 21.1101 10.439 21.881V14.892H7.90195V12.002H10.442V9.80204C10.3284 8.75958 10.6845 7.72064 11.4136 6.96698C12.1427 6.21332 13.1693 5.82306 14.215 5.90204C14.9655 5.91417 15.7141 5.98101 16.455 6.10205V8.56104H15.191C14.7558 8.50405 14.3183 8.64777 14.0017 8.95171C13.6851 9.25566 13.5237 9.68693 13.563 10.124V12.002H16.334L15.891 14.893H13.563V21.881C18.8174 21.0506 22.502 16.2518 21.9475 10.9611C21.3929 5.67041 16.7932 1.73997 11.4808 2.01722C6.16831 2.29447 2.0028 6.68235 2.00195 12.002Z">
+                        </path>
+                    </svg>
+                </a>
+
+                <a href="#" class="mx-2 text-white dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Github">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg"><title>Github</title>
+                        <path
+                            d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842 10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302 21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402 20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002 17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302 15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657 16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747 7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902 17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002 16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691 9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802 6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639 6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264 6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364 8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388 15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612 17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499 20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265 19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181 1.99888 12.026 2Z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="#" class="mx-2 text-gray-600 w-4 h-4 flex justify-center  dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 rounded-full bg-slate-300" aria-label="Instagram">
+                    <svg role="img" viewBox="0 0 24 24" class="  text-center" width="10"  xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+                </a>
+                <a href="#" class="mx-2 text-gray-600 w-4 h-4 flex justify-center  dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 rounded-full bg-slate-300" aria-label="Twitter">
+                    <svg role="img" viewBox="0 0 24 24" width="10" class=" text-center" xmlns="http://www.w3.org/2000/svg"><title>Twitter</title><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                </a>
+            </div>
+        </footer>
+   </section>
+   <script src="./dist/js/script.js"></script>
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            slidesPerGroup: 1,
+            loop: true,
+            autoplay: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                0: {
+                  slidesPerView: 1,
+                  spaceBetween: 20,
+                },
+                640: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                768: {
+                  slidesPerView: 3,
+                  spaceBetween: 40,
+                },
+                1024: {
+                  slidesPerView: 3,
+                  spaceBetween: 40,
+                },
+            },
+        });
+   </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/TextPlugin.min.js"></script>
+    <script>
+        gsap.registerPlugin(TextPlugin);
+        gsap.from('.text-1',{duration: 1.5, x: -50, opacity: 0, delay: 0.5, ease: 'back'});
+        gsap.from('.text-2',{duration: 1, x: -50, opacity: 0, delay: 1.5, ease: 'back'});
+        gsap.from('.button-home',{duration: 4, x: -50, opacity: 0, delay: 2, ease: 'back'});
+        gsap.from('.icon-home',{duration: 4, x: -50, opacity: 0, delay: 2, ease: 'bounce'});
+        gsap.to(".text-3", {duration: 3.5,delay:1.5, text: "Student | Junior Web Developer"})
+    </script>
+    
+</body>
+</html>

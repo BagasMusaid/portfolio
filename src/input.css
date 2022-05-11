@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hamburger-active > span:nth-child(1){
+
+    @apply rotate-45 ;
+}
+.hamburger-active > span:nth-child(2){
+
+    @apply scale-0;
+}
+
+.hamburger-active > span:nth-child(3){
+
+    @apply -rotate-45 ;
+}
+.navbar-fixed{
+    @apply fixed z-[9999] bg-white bg-opacity-60 dark:bg-slate-800 dark:bg-opacity-50;
+    backdrop-filter : blur(5px);
+    box-shadow : inset 0 -1px 0 0 rgba(0,0,0,0.1);
+}
+.nav-aboute:hover::after{
+    content: '';
+    display: block;
+    border-bottom: 5px solid #0E3EDA;
+    width: 30px;
+    margin: auto;
+    margin-bottom: -10px;
+    border-radius: 20px;
+}
+
+.navigasi:hover::after{
+    content: '';
+    display: block;
+    border-bottom: 5px solid #0E3EDA;
+    width: 30%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    margin-bottom: -10px;
+    border-radius: 20px;
+    transform-origin: left;
+    transition: transform .25s ease;
+    
+}
+.progres-bar{
+    background: linear-gradient(to left, #38bdf8,#0ea5e9);
+}
+.img-blog{
+    border-radius:30px;
+}
+.tab-active{
+    border-bottom:2px;
+    background: black;
+}
+
+.ball,
+.sunn,
+.moon{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.ball{
+    transition: transform .5s ease-in-out;
+}
+#checkbox:checked + .ball{
+    transform: translate(38px, -50%);
+}
+.boll,
+.sun,
+.moont{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.boll{
+    transition: transform .5s ease-in-out;
+}
+#checkbox2:checked + .boll{
+    transform: translate(38px, -50%);
+}
+.swiper-pagination-bullet{
+    @apply dark:bg-white ;
+}
